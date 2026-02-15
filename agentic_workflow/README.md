@@ -8,6 +8,7 @@ This folder is a standalone sandbox for developing your agentic AI compliance wo
 - `example_run.py` - Pilot-style sample run for TRHS clauses
 - `supabase_store.py` - Optional Supabase persistence client (REST)
 - `supabase_schema.sql` - SQL schema for `workflow_runs` and `clause_traces`
+- `supabase_dashboard_queries.sql` - Ready-to-run KPI and monitoring queries
 - `.env.example` - Environment variables template for Supabase
 
 ## Quick run
@@ -37,6 +38,16 @@ $env:WORKFLOW_SOURCE="agentic_workflow_example"
 4. Run `example_run.py` again. It will:
 	- save local JSON trace, and
 	- upload `workflow_runs` + `clause_traces` to Supabase.
+
+## Dashboard queries
+- Open Supabase SQL Editor and run queries from:
+	- `agentic_workflow/supabase_dashboard_queries.sql`
+- Included analytics:
+	- run-level auto-approval trend,
+	- escalation hotspots by clause,
+	- confidence bucket distribution,
+	- risk-tier behavior,
+	- latest run trace breakdown.
 
 ## How to extend next
 1. Replace `sample` in `example_run.py` with real clause outputs from your parser/analyzer.
