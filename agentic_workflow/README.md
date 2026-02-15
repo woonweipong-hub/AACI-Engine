@@ -1,0 +1,45 @@
+# Agentic Workflow Sandbox (Research Folder)
+
+This folder is a standalone sandbox for developing your agentic AI compliance workflow without touching AECOA production code.
+
+## Files
+- `safety_gate.py` - Risk-tier decision policy (`auto_approve` vs `abstain_escalate`)
+- `workflow_orchestrator.py` - Minimal orchestration and trace generation
+- `example_run.py` - Pilot-style sample run for TRHS clauses
+- `supabase_store.py` - Optional Supabase persistence client (REST)
+- `supabase_schema.sql` - SQL schema for `workflow_runs` and `clause_traces`
+- `.env.example` - Environment variables template for Supabase
+
+## Quick run
+From the workspace root:
+
+```powershell
+c:/2026_Research/.venv/Scripts/python.exe c:/2026_Research/agentic_workflow/example_run.py
+```
+
+Output file:
+- `agentic_workflow/outputs/pilot_run_trace.json`
+
+## Supabase integration (optional)
+1. In your Supabase SQL Editor, run:
+	- `agentic_workflow/supabase_schema.sql`
+2. Copy `.env.example` to `.env` and set:
+	- `SUPABASE_URL`
+	- `SUPABASE_SERVICE_ROLE_KEY`
+3. In PowerShell before running:
+
+```powershell
+$env:SUPABASE_URL="https://mevfmqbrtovdmzmbaals.supabase.co"
+$env:SUPABASE_SERVICE_ROLE_KEY="<your-service-role-key>"
+$env:WORKFLOW_SOURCE="agentic_workflow_example"
+```
+
+4. Run `example_run.py` again. It will:
+	- save local JSON trace, and
+	- upload `workflow_runs` + `clause_traces` to Supabase.
+
+## How to extend next
+1. Replace `sample` in `example_run.py` with real clause outputs from your parser/analyzer.
+2. Add per-clause metadata: model, provider, prompt version, source page/sheet.
+3. Add calibration post-processing to convert raw scores into calibrated confidence.
+4. Add a reviewer feedback file and update thresholds per risk tier.
