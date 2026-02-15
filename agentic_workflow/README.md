@@ -49,6 +49,12 @@ $env:WORKFLOW_SOURCE="agentic_workflow_example"
 	- risk-tier behavior,
 	- latest run trace breakdown.
 
+## Publication fast-track kit (72h)
+- For urgent submission preparation, use:
+	- `agentic_workflow/publication_fasttrack/72h_execution_plan.md`
+	- `agentic_workflow/publication_fasttrack/results_table_template.csv`
+	- `agentic_workflow/publication_fasttrack/manuscript_patch_checklist.md`
+
 ## How to extend next
 1. Replace `sample` in `example_run.py` with real clause outputs from your parser/analyzer.
 2. Add per-clause metadata: model, provider, prompt version, source page/sheet.

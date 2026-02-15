@@ -1,0 +1,5 @@
+experiment_id,method,clause_id,risk_tier,ground_truth,prediction,gate_action,confidence,uncertainty,tp,fp,tn,fn,abstained,error_category,error_note,run_id
+E1,baseline,TRHS-2.10,A,pass,pass,auto_approve,0.00,0.00,0,0,0,0,0,,,
+E1,agentic,TRHS-2.10,A,pass,conditional_pass,abstain_escalate,0.84,0.31,0,0,0,0,1,representational_ambiguity,staircase boundary inferred,
+E1,baseline,TRHS-2.2.2a,A,pass,pass,auto_approve,0.00,0.00,0,0,0,0,0,,,
+E1,agentic,TRHS-2.2.2a,A,pass,pass,auto_approve,0.96,0.12,0,0,0,0,0,,,
