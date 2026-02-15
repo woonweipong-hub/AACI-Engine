@@ -18,8 +18,25 @@ From the workspace root:
 c:/2026_Research/.venv/Scripts/python.exe c:/2026_Research/agentic_workflow/example_run.py
 ```
 
+### Multi-clause run (recommended)
+
+```powershell
+c:/2026_Research/.venv/Scripts/python.exe c:/2026_Research/AACI-Engine/agentic_workflow/batch_run.py
+```
+
+With Supabase upload:
+
+```powershell
+c:/2026_Research/.venv/Scripts/python.exe c:/2026_Research/AACI-Engine/agentic_workflow/batch_run.py --upload
+```
+
 Output file:
 - `agentic_workflow/outputs/pilot_run_trace.json`
+- `agentic_workflow/outputs/multi_clause_run_trace.json`
+
+Input example for multiple clauses:
+- `agentic_workflow/inputs/clauses_input_example.json`
+- Includes `TRHS-2.1` and additional clauses for batch execution.
 
 ## Supabase integration (optional)
 1. In your Supabase SQL Editor, run:
@@ -52,6 +69,7 @@ $env:WORKFLOW_SOURCE="agentic_workflow_example"
 ## Publication fast-track kit (72h)
 - For urgent submission preparation, use:
 	- `agentic_workflow/publication_fasttrack/72h_execution_plan.md`
+	- `agentic_workflow/publication_fasttrack/FRAMEWORK_SCOPE_CLAUSE_REQUIREMENTS.md`
 	- `agentic_workflow/publication_fasttrack/results_table_template.csv`
 	- `agentic_workflow/publication_fasttrack/manuscript_patch_checklist.md`
 
@@ -60,3 +78,5 @@ $env:WORKFLOW_SOURCE="agentic_workflow_example"
 2. Add per-clause metadata: model, provider, prompt version, source page/sheet.
 3. Add calibration post-processing to convert raw scores into calibrated confidence.
 4. Add a reviewer feedback file and update thresholds per risk tier.
+
+For multiple-clause scaling, prefer `batch_run.py` with JSON/CSV inputs rather than editing `example_run.py`.
