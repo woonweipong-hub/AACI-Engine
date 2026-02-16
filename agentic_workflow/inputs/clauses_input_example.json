@@ -1,0 +1,47 @@
+[
+  {
+    "clause_id": "TRHS-2.1",
+    "compliance_label": "pass",
+    "confidence": 0.93,
+    "uncertainty": 0.14,
+    "risk_tier": "A",
+    "evidence_refs": ["plan_P1", "rule_2_1"],
+    "assumptions": []
+  },
+  {
+    "clause_id": "TRHS-2.10",
+    "compliance_label": "conditional_pass",
+    "confidence": 0.84,
+    "uncertainty": 0.31,
+    "risk_tier": "A",
+    "evidence_refs": ["drawing_sheet_A1", "jsonl_rule_2_10"],
+    "assumptions": ["staircase boundary inferred from annotation layer"]
+  },
+  {
+    "clause_id": "TRHS-2.2.2a",
+    "compliance_label": "pass",
+    "confidence": 0.96,
+    "uncertainty": 0.12,
+    "risk_tier": "A",
+    "evidence_refs": ["section_view_S2"],
+    "assumptions": []
+  },
+  {
+    "clause_id": "TRHS-2.4.3c",
+    "compliance_label": "fail",
+    "confidence": 0.78,
+    "uncertainty": 0.35,
+    "risk_tier": "A",
+    "evidence_refs": ["roof_plan_R1", "setback_calc_v2"],
+    "assumptions": ["trellis extents interpreted from partial detail"]
+  },
+  {
+    "clause_id": "TRHS-4.2b",
+    "compliance_label": "conditional_pass",
+    "confidence": 0.72,
+    "uncertainty": 0.44,
+    "risk_tier": "A",
+    "evidence_refs": ["mep_sheet_M1", "room_labels"],
+    "assumptions": ["wet-area labels incomplete on one sheet"]
+  }
+]
