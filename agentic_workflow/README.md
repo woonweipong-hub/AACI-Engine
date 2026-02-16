@@ -74,6 +74,10 @@ $env:WORKFLOW_SOURCE="agentic_workflow_example"
 	- `agentic_workflow/publication_fasttrack/results_table_template.csv`
 	- `agentic_workflow/publication_fasttrack/manuscript_patch_checklist.md`
 
+## Generic requirement-to-JSONL toolkit
+- Reusable toolkit for converting regulations into machine-readable JSONL:
+	- `requirements_jsonl_toolkit/README.md`
+
 ## How to extend next
 1. Replace `sample` in `example_run.py` with real clause outputs from your parser/analyzer.
 2. Add per-clause metadata: model, provider, prompt version, source page/sheet.
