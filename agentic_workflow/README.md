@@ -70,6 +70,7 @@ $env:WORKFLOW_SOURCE="agentic_workflow_example"
 - For urgent submission preparation, use:
 	- `agentic_workflow/publication_fasttrack/72h_execution_plan.md`
 	- `agentic_workflow/publication_fasttrack/FRAMEWORK_SCOPE_CLAUSE_REQUIREMENTS.md`
+	- `agentic_workflow/publication_fasttrack/TRHS_THREE_PHASE_CLAUSE_EXTRACTS.md`
 	- `agentic_workflow/publication_fasttrack/results_table_template.csv`
 	- `agentic_workflow/publication_fasttrack/manuscript_patch_checklist.md`
 
